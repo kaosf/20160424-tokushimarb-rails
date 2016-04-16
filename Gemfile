@@ -34,7 +34,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'test-unit-rails'
+  gem 'test-unit-rails', github: 'test-unit/test-unit-rails'
+  # ref.  https://github.com/test-unit/test-unit-rails
 end
 
 group :development do
