@@ -34,7 +34,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'test-unit', '~> 3.1'
   gem 'test-unit-rails', '~> 5.0'
 end
 

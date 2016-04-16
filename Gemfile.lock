@@ -190,7 +190,6 @@ DEPENDENCIES
   redis (~> 3.0)
   sass-rails (~> 5.0)
   spring
-  test-unit (~> 3.1)
   test-unit-rails (~> 5.0)
   turbolinks
   tzinfo-data
