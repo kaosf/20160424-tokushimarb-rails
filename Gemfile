@@ -35,6 +35,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'test-unit', '~> 3.1'
+  gem 'test-unit-rails', '~> 5.0'
 end
 
 group :development do
