@@ -37,6 +37,7 @@ gem 'puma', '3.4.0'
 gem 'rails_12factor', '0.0.3'
 gem 'devise', '4.0.0'
 gem 'carrierwave', '0.11.0'
+gem 'fog-aws', '0.9.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
