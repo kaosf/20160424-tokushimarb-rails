@@ -1,10 +1,11 @@
 class EntriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.where(user: current_user)
   end
 
   # GET /entries/1
@@ -25,6 +26,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @entry.user = current_user
 
     respond_to do |format|
       if @entry.save
@@ -65,10 +67,16 @@ class EntriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
       @entry = Entry.find(params[:id])
+      if @entry.user != current_user
+        respond_to do |format|
+          format.html { redirect_to entries_url }
+          format.json { head :no_content }
+        end
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:user_id, :title, :body, :file)
+      params.require(:entry).permit(:title, :body, :file)
     end
 end
