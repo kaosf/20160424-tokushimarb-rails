@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -33,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'puma', '3.4.0'
+gem 'rails_12factor', '0.0.3'
 gem 'devise', '4.0.0'
 gem 'carrierwave', '0.11.0'
 
