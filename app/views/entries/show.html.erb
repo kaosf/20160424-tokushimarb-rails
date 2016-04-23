@@ -17,7 +17,11 @@
 
 <p>
   <strong>File:</strong>
-  <%= @entry.file %>
+  <% if @entry.file? %>
+    <%= @entry.file_url %>
+  <% else %>
+    No file
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
