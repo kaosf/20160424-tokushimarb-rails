@@ -13,7 +13,7 @@
 <p>
   <strong>File:</strong>
   <% if @entry.file? %>
-    <%= @entry.file_url %>
+    <%= link_to @entry.file_url, @entry.file_url %>
   <% else %>
     No file
   <% end %>
