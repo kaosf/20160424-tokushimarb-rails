@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
       <th>Title</th>
       <th>Body</th>
       <th>File</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @entries.each do |entry| %>
       <tr>
-        <td><%= entry.user %></td>
         <td><%= entry.title %></td>
         <td><%= entry.body %></td>
         <td><%= entry.file.url if entry.file? %></td>
